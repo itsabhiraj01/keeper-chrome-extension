@@ -3,7 +3,7 @@ $(function () {
     chrome.storage.sync.get("keyword",function(object) {
         if(object.keyword) {
             searchNote(object.keyword);
-            $('#keyword').text(object.keyword);
+            $('#keyword').val(object.keyword);
             chrome.storage.sync.set({"keyword":""}, function() {
             });
         }

@@ -17,6 +17,7 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
                 chrome.windows.create({
                     tabId: tab.id,
                     type: 'popup',
+                    // state: 'minimized',
                     focused: true
                 });
             });
