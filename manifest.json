@@ -1,0 +1,27 @@
+{
+    "manifest_version" : 2,
+    "name" : "keeper",
+    "version" : "1.0",
+    "description" : "Keeper to keep your notes",
+    "icons" : {
+        "128" : "icon128.png",
+        "48" : "icon48.png",
+        "16" : "icon16.png"
+    },
+    "browser_action" : {
+        "deafault_icon" : "icon16.png",
+        "default_popup" : "popup.html"
+    },
+    "background" : {
+        "scripts" : ["eventPage.js"],
+        "persistent" : false
+    },
+    "permissions": [
+        "storage",
+        "contextMenus",
+        "windows",
+        "tabs"
+    ],
+
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://cdnjs.cloudflare.com https://stackpath.bootstrapcdn.com https://use.fontawesome.com https://stackpath.bootstrapcdn.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com;"
+}
